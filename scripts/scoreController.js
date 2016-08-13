@@ -1,12 +1,13 @@
-app.controller('scoreController', ['$scope', function($scope) {
-
-    $scope.players = [
-                        {"Name":"James","Score":0},                        {"Name":"David","Score":0},
-                        {"Name":"Frank","Score":0},     
-                     ];
-    
-    $scope.score = function(player,score){
-        player.Score+=score;        
+app.controller('scoreController', ['$scope', function ($scope) {
+    $scope.players = [];
+    $scope.score = function (player, score) {
+        player.Score += score;
     };
-    
+    $scope.addName = function (newName) {
+        var newPlayer = {
+            "Name": newName
+            , "Score": 0
+        };
+        $scope.players = $scope.players.concat(newPlayer);
+    };
 }]);
