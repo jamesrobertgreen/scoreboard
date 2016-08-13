@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/scoreController.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <meta charset="UTF-8">
+    <title>Scoreboard</title>
+</head>
+
+<body ng-app="scorer" ng-controller="scoreController" ng-cloak>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"><h1>Score Board</h1></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 bold">Name</div>
+            <div class="col-md-3">Score</div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row" ng-repeat="player in players">
+            <div class="col-md-3">{{player.Name}}</div>
+            <div class="col-md-3">{{player.Score}}</div>
+            <div class="col-md-1">
+                <button class="btn btn-success" ng-click="score(player,5)">+5</button>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-success" ng-click="score(player,3)">+3</button>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-success" ng-click="score(player,2)">+2</button>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-warning" ng-click="score(player,-5)">-5</button>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-warning" ng-click="score(player,-3)">-3</button>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-warning" ng-click="score(player,-2)">-2</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
