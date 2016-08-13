@@ -19,40 +19,38 @@
 
 <body ng-app="scorer" ng-controller="scoreController" ng-cloak>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12"><h1>Score Board</h1></div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 bold">Name</div>
-            <div class="col-md-3">Score</div>
-            <div class="col-md-1"></div>
-            <div class="col-md-1"></div>
-            <div class="col-md-1"></div>
-            <div class="col-md-1"></div>
-            <div class="col-md-1"></div>
-            <div class="col-md-1"></div>
-        </div>
-        <div class="row" ng-repeat="player in players">
-            <div class="col-md-3">{{player.Name}}</div>
-            <div class="col-md-3">{{player.Score}}</div>
-            <div class="col-md-1">
-                <button class="btn btn-success" ng-click="score(player,5)">+5</button>
-            </div>
-            <div class="col-md-1">
-                <button class="btn btn-success" ng-click="score(player,3)">+3</button>
-            </div>
-            <div class="col-md-1">
-                <button class="btn btn-success" ng-click="score(player,2)">+2</button>
-            </div>
-            <div class="col-md-1">
-                <button class="btn btn-warning" ng-click="score(player,-5)">-5</button>
-            </div>
-            <div class="col-md-1">
-                <button class="btn btn-warning" ng-click="score(player,-3)">-3</button>
-            </div>
-            <div class="col-md-1">
-                <button class="btn btn-warning" ng-click="score(player,-2)">-2</button>
-            </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title"> Score Board</h1> </div>
+            <table class="table table-bordered">
+                <tr class="row">
+                    <td>Name</td>
+                    <td>Score</td>
+                    <td></td>
+                </tr>
+                <tr class="row" ng-repeat="player in players">
+                    <td>{{player.Name}}</td>
+                    <td>{{player.Score}}</td>
+                    <td>
+                        <button class="btn btn-lg btn-success" ng-click="score(player,5)">+5</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-success" ng-click="score(player,3)">+3</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-success" ng-click="score(player,2)">+2</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-warning" ng-click="score(player,-5)">-5</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-warning" ng-click="score(player,-3)">-3</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-warning" ng-click="score(player,-2)">-2</button>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
