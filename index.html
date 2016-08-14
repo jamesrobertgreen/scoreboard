@@ -55,11 +55,12 @@
                 </tr>
             </table>
         </div>
-        <form>
+        <form name="scoreboardForm" ng-submit="scoreboardForm.$valid && addName(newName)">
             <div class="form-group">
                 <label class="control-label">Add Name</label>
-                <input type="text" class="form-control input-lg" placeholder="Add name" ng-model="newName"> </div>
-            <button type="submit" class="btn btn-lg btn-primary" ng-click="addName(newName)">Add</button>
+                <input type="text" name="newName" required class="form-control input-lg" ng-minlength="1" placeholder="Add name" ng-model="newName">
+            </div>
+            <button type="submit" class="btn btn-lg btn-primary">Add</button>
         </form>
     </div>
 </body>
