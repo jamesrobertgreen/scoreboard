@@ -21,9 +21,10 @@
     <div class="container-fluid">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h1 class="panel-title"> Score Board</h1> </div>
+                <h1 class="panel-title"> Score Board</h1>
+            </div>
             <table class="table table-bordered">
-                <tr class="row">
+                <tr ng-hide="players.length == 0" class="row">
                     <td>Name</td>
                     <td>Score</td>
                     <td></td>
@@ -55,6 +56,9 @@
                     <td>
                         <button class="btn btn-lg btn-danger" ng-click="remove($index)">X</button>
                     </td>
+                </tr>
+                <tr class="row">
+                <td  ng-show="players.length == 0">Please enter some names</td>
                 </tr>
             </table>
         </div>
