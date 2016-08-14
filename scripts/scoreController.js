@@ -10,7 +10,12 @@ app.controller('scoreController', ['$scope', function ($scope) {
         };
         $scope.players = $scope.players.concat(newPlayer);
     };
+    
     $scope.reset = function (player) {
         player.Score = 0;
+    };
+    
+    $scope.remove = function ($index) {
+        $scope.players.splice($index, 1);
     };
 }]);
