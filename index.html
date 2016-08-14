@@ -18,7 +18,7 @@
 </head>
 
 <body ng-app="scorer" ng-controller="scoreController" ng-cloak>
-    <div class="container">
+    <div class="container-fluid">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h1 class="panel-title"> Score Board</h1> </div>
@@ -38,7 +38,7 @@
                         <button class="btn btn-lg btn-success" ng-click="score(player,3)">+3</button>
                     </td>
                     <td>
-                        <button class="btn btn-lg btn-success" ng-click="score(player,2)">+2</button>
+                        <button class="btn btn-lg btn-success" ng-click="score(player,1)">+1</button>
                     </td>
                     <td>
                         <button class="btn btn-lg btn-warning" ng-click="score(player,-5)">-5</button>
@@ -47,7 +47,7 @@
                         <button class="btn btn-lg btn-warning" ng-click="score(player,-3)">-3</button>
                     </td>
                     <td>
-                        <button class="btn btn-lg btn-warning" ng-click="score(player,-2)">-2</button>
+                        <button class="btn btn-lg btn-warning" ng-click="score(player,-1)">-1</button>
                     </td>
                     <td>
                         <button class="btn btn-lg btn-primary" ng-click="reset(player)">Reset</button>
