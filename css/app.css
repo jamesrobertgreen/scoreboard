@@ -7,3 +7,8 @@ body {
     font-size: 2em;
     font-weight: bold;
 }
+
+.container-fluid{
+    padding: 50px;
+}
+
